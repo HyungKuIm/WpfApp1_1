@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.ViewModel;
 
 namespace WpfApp1;
 /// <summary>
@@ -31,6 +32,8 @@ public partial class MainWindow : Window
     private void MainWindow_Loaded(object sender, RoutedEventArgs e)
     {
         //throw new NotImplementedException();
+        MainWindowViewModel viewModel = new MainWindowViewModel();
+        DataContext = viewModel;
     }
 
     protected override void OnClosing(CancelEventArgs e)

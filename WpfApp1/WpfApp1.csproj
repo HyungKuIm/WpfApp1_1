@@ -10,15 +10,20 @@
 
   <ItemGroup>
     <None Remove="Images\imhk.jpg" />
+    <None Remove="Images\sora.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\imhk.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\sora.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WpfApp1.ViewModel\WpfApp1.ViewModel.csproj" />
     <ProjectReference Include="..\WpfApp1.Views\WpfApp1.Views.csproj" />
   </ItemGroup>
 
