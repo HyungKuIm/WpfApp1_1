@@ -10,20 +10,24 @@ using WpfApp1.DataModels.Enums;
 namespace WpfApp1.ViewModel;
 public class MainWindowViewModel : BaseViewModel
 {
+    private BaseViewModel viewModel;
     private PageModel activePage = null;
     private ObservableCollection<PageModel> pages = null;
 
     public MainWindowViewModel()
     {
         InitializeData();
+        ViewModel = new StartViewModel();
+        
     }
 
-    private void InitializeData()
+    public BaseViewModel ViewModel
     {
-        pages = new ObservableCollection<PageModel>();
-        pages.Add(new PageModel(typeof(StartViewModel), Page.StartView));
-        pages.Add(new PageModel(typeof(SoraViewModel), Page.SoraView));
+        get { return viewModel; }
+        set { if (viewModel != value) { viewModel = value; NotifyPropertyChanged(); } }
     }
+
+    
 
     public ObservableCollection<PageModel> Pages
     {
@@ -34,6 +38,24 @@ public class MainWindowViewModel : BaseViewModel
     public PageModel ActivePage
     {
         get { return activePage; }
-        set { if (activePage != value) { activePage = value; NotifyPropertyChanged(); } }
+        set { 
+            if (activePage != value) 
+            { 
+                activePage = value; 
+                NotifyPropertyChanged(); 
+
+                if (activePage != null)
+                {
+                    ViewModel = Activator.CreateInstance(activePage.Type) as BaseViewModel;
+                }
+            } 
+        }
+    }
+
+    private void InitializeData()
+    {
+        pages = new ObservableCollection<PageModel>();
+        pages.Add(new PageModel(typeof(StartViewModel), Page.StartView));
+        pages.Add(new PageModel(typeof(SoraViewModel), Page.SoraView));
     }
 }
