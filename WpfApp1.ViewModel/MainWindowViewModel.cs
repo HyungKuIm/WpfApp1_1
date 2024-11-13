@@ -60,5 +60,10 @@ public class MainWindowViewModel : BaseViewModel
         pages.Add(new PageModel(typeof(HKViewModel), Page.HKView));
         pages.Add(new PageModel(typeof(GridViewModel), Page.WpfGridSample));
         pages.Add(new PageModel(typeof(NameAddViewModel), Page.WpfDataBinding));
+        pages.Add(new PageModel(typeof(ControlTemplateViewModel), Page.ControlTemplateView));
+        pages.Add(new PageModel(typeof(ResourceTestViewModel), Page.ResourceTestView));
+        pages.Add(new PageModel(typeof(CalendarViewModel), Page.CalendarView));
+        pages.Add(new PageModel(typeof(AnimationTestViewModel), Page.AnimationTestView));
+        pages.Add(new PageModel(typeof(RoutedEventTestViewModel), Page.RoutedEventTestView));
     }
 }

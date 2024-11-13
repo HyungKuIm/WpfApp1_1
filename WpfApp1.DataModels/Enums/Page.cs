@@ -21,6 +21,23 @@ public enum Page
     WpfGridSample,
 
     [Description("데이터바인딩 샘플")]
-    WpfDataBinding
+    WpfDataBinding,
+
+    [Description("컨트롤템플릿 샘플")]
+    ControlTemplateView,
+
+    [Description("리소스 연습")]
+    ResourceTestView,
+
+    [Description("캘린더(유니폼그리드)")]
+    CalendarView,
+
+    [Description("애니메이션 연습")]
+    AnimationTestView,
+
+    [Description("라우트이벤트 연습")]
+    RoutedEventTestView,
+
+
 
 }

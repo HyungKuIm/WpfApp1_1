@@ -23,5 +23,25 @@
         <DataTemplate DataType="{x:Type ViewModels:NameAddViewModel}">
             <Views:WpfDataBinding />
         </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ViewModels:ControlTemplateViewModel}">
+            <Views:ControlTemplateView />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ViewModels:ResourceTestViewModel}">
+            <Views:ResourceTestView />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ViewModels:CalendarViewModel}">
+            <Views:CalendarView />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ViewModels:AnimationTestViewModel}">
+            <Views:AnimationTestView />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ViewModels:RoutedEventTestViewModel}">
+            <Views:RoutedEventTestView />
+        </DataTemplate>
     </Application.Resources>
 </Application>
