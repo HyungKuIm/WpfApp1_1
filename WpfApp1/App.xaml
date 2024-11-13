@@ -13,5 +13,15 @@
         <DataTemplate DataType="{x:Type ViewModels:SoraViewModel}">
             <Views:SoraView />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type ViewModels:HKViewModel}">
+            <Views:HKView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type ViewModels:GridViewModel}">
+            <Views:WpfGridSample />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ViewModels:NameAddViewModel}">
+            <Views:WpfDataBinding />
+        </DataTemplate>
     </Application.Resources>
 </Application>

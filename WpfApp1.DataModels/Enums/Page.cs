@@ -12,5 +12,15 @@ public enum Page
     StartView,
 
     [Description("고양이 소라군 소개")]
-    SoraView
+    SoraView,
+
+    [Description("임형구 소개")]
+    HKView,
+
+    [Description("그리드 샘플")]
+    WpfGridSample,
+
+    [Description("데이터바인딩 샘플")]
+    WpfDataBinding
+
 }

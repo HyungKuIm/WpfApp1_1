@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="WpfApp1.Views.WpfDataBinding"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1.Views"
+             xmlns:cs="clr-namespace:WpfApp1.DataModels;assembly=WpfApp1.DataModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <cs:NameAdds x:Key="names">
+            <cs:NameAdd Name="강호동" Add="서울시 구로구"/>
+            <cs:NameAdd Name="이만기" Add="경기도 구리시"/>
+            <cs:NameAdd Name="김연아" Add="인천시 부평구"/>
+            <cs:NameAdd Name="김연경" Add="인천시 부평구 삼산체육관"/>
+        </cs:NameAdds>
+    </UserControl.Resources>
+    <Grid x:Name="Maingrid" DataContext="{StaticResource names}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Label Content="성명: " />
+            <TextBox x:Name="txtName" Text="{Binding Path=Name}"/>
+            <Label Content="주소: " />
+            <TextBox x:Name="txtAddress" Text="{Binding Path=Add}"/>
+            <Button x:Name="insertbutton" Content="추가"
+                    Click="insertbutton_Click"/>
+        </StackPanel>
+        <ListBox 
+            Grid.Column="1"
+            x:Name="list" ItemsSource="{Binding}"
+            IsSynchronizedWithCurrentItem="True"
+                 FontSize="12" FontWeight="Bold">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <TextBlock Text="{Binding Name}"/>
+                        <TextBlock Text=": "/>
+                        <TextBlock Text="{Binding Add}"/>
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

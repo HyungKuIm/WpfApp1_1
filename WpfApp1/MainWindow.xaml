@@ -18,6 +18,6 @@
                      
         </Grid>
         <ContentControl Grid.Column="1" Content="{Binding ViewModel}"
-                        HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
     </Grid>
 </Window>
