@@ -10,7 +10,6 @@ public class ActionCommand : ICommand
 {
     readonly Action<object> action;
     readonly Predicate<object> canExecute;
-    private EventHandler eventHandler;
 
     public ActionCommand(Action<object> action) : this(action, null) { }
 
@@ -24,15 +23,15 @@ public class ActionCommand : ICommand
     {
         add
         {
-            eventHandler += value;
             CommandManager.RequerySuggested += value;
         }
         remove
         {
-            eventHandler -= value;
             CommandManager.RequerySuggested -= value;
         }
     }
+
+    
 
     public bool CanExecute(object? parameter)
     {

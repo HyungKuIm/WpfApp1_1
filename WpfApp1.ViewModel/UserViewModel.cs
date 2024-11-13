@@ -23,7 +23,16 @@ namespace WpfApp1.ViewModel
 
         public ICommand SaveCommand 
         {
-            get { return new ActionCommand(Action => Save()); }
+            get {
+                ActionCommand actionCommand = new ActionCommand(Action => Save(), CanExecute => CanSave());
+                //actionCommand.RaiseCanExecuteChanged();
+                return actionCommand; 
+            }
+        }
+
+        private bool CanSave()
+        {
+            return User.Name.Trim().Length > 0;
         }
 
         private void Save()
