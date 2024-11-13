@@ -12,5 +12,8 @@ public enum Page
     StartView,
 
     [Description("고양이 소라군 소개")]
-    SoraView
+    SoraView,
+
+    [Description("사용자 추가")]
+    UserView,
 }

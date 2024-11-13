@@ -13,5 +13,8 @@
         <DataTemplate DataType="{x:Type ViewModels:SoraViewModel}">
             <Views:SoraView />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type ViewModels:UserViewModel}">
+            <Views:UserView />
+        </DataTemplate>
     </Application.Resources>
 </Application>

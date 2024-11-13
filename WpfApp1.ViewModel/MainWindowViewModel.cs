@@ -57,5 +57,6 @@ public class MainWindowViewModel : BaseViewModel
         pages = new ObservableCollection<PageModel>();
         pages.Add(new PageModel(typeof(StartViewModel), Page.StartView));
         pages.Add(new PageModel(typeof(SoraViewModel), Page.SoraView));
+        pages.Add(new PageModel(typeof(UserViewModel), Page.UserView));
     }
 }
