@@ -11,6 +11,19 @@ public class User : BaseDataModel
     private string name = string.Empty;
     private int age = 0;
     private Address address = new Address();
+
+    public User()
+    {
+        
+    }
+
+    public User(Guid id, string name, int age)
+    {
+        Id = id;
+        Name = name;
+        Age = age;
+    }
+
     public Guid Id
     {
         get => id; // get { return id; }

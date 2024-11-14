@@ -55,5 +55,9 @@
         <DataTemplate DataType="{x:Type ViewModels:DependencyPropertyViewModel}">
             <Views:DependencyPropertyTest />
         </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ViewModels:AllUsersViewModel}">
+            <Views:AllUsersView />
+        </DataTemplate>
     </Application.Resources>
 </Application>

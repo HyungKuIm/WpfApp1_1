@@ -47,6 +47,7 @@ public enum Page
     [Description("의존 프로퍼티 연습")]
     DependencyPropertyTest,
 
-
+    [Description("아이템즈컨트롤 연습")]
+    AllUsersView,
 
 }
