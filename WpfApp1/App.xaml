@@ -60,7 +60,11 @@
         <DataTemplate DataType="{x:Type ViewModels:AllUsersViewModel}">
             <Views:AllUsersView />
         </DataTemplate>
-        
+
+        <DataTemplate DataType="{x:Type ViewModels:MenuViewModel}">
+            <Views:KBOView />
+        </DataTemplate>
+
         <!-- 사용자 템플릿 -->
         <DataTemplate x:Key="UserTemplate" DataType="{x:Type DataModels:User}">
             <Border BorderBrush="Black" BorderThickness="1" CornerRadius="5"

@@ -50,4 +50,7 @@ public enum Page
     [Description("아이템즈컨트롤 연습")]
     AllUsersView,
 
+    [Description("메뉴 연습")]
+    KBOView,
+
 }
