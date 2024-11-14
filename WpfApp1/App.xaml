@@ -47,5 +47,13 @@
         <DataTemplate DataType="{x:Type ViewModels:CommandViewModel}">
             <Views:CommandView />
         </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ViewModels:UserViewModel}">
+            <Views:UserView />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ViewModels:DependencyPropertyViewModel}">
+            <Views:DependencyPropertyTest />
+        </DataTemplate>
     </Application.Resources>
 </Application>

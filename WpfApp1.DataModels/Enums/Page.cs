@@ -41,6 +41,12 @@ public enum Page
     [Description("커맨드 뷰 연습")]
     CommandView,
 
+    [Description("사용자추가 연습")]
+    UserView,
+
+    [Description("의존 프로퍼티 연습")]
+    DependencyPropertyTest,
+
 
 
 }
