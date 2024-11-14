@@ -26,7 +26,10 @@ public partial class CommandView : UserControl, INotifyPropertyChanged
     public string ImageUri
     {
         get { return imageUri; }
-        set { imageUri = value; OnPropertyChanged(nameof(ImageUri)); }
+        set { imageUri = value; 
+            OnPropertyChanged(nameof(ImageUri));
+            OnPropertyChanged(nameof(ImageSource));
+        }
     }
 
     public CommandView()
@@ -61,7 +64,7 @@ public partial class CommandView : UserControl, INotifyPropertyChanged
 
     public ICommand Test
     {
-        get { return new TestCommand(); }
+        get { return new TestCommand(this); }
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
