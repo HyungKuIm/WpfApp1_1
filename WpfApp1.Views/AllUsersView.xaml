@@ -4,11 +4,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp1.Views"
+             xmlns:Selectors="clr-namespace:WpfApp1.Views.Selectors"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Selectors:UserAgeSelector x:Key="UserAgeSelector" />
+    </UserControl.Resources>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
         <StackPanel>
             <ItemsControl ItemsSource="{Binding Users}" Width="100" />
-        </StackPanel>  
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <ItemsControl ItemsSource="{Binding Users}" 
+                          ItemTemplate="{StaticResource UserTemplate}"
+                          Width="200" />
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <ItemsControl ItemsSource="{Binding Users}"
+                          ItemTemplateSelector="{StaticResource UserAgeSelector}"
+                          Width="200"/>
+        </StackPanel>
     </Grid>
 </UserControl>

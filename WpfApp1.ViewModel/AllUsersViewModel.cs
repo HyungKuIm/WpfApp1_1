@@ -22,6 +22,7 @@ public class AllUsersViewModel : BaseViewModel
         Users.Add(new User(Guid.NewGuid(), "레오나르도 디카프리오", 50));
         Users.Add(new User(Guid.NewGuid(), "리차드 레드포드", 55));
         Users.Add(new User(Guid.NewGuid(), "티모시 살로멧", 30));
+        Users.Add(new User(Guid.NewGuid(), "윤여정", 80));
     }
 
     public ObservableCollection<User> Users
