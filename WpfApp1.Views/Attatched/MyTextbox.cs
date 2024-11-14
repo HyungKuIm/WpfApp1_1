@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace WpfApp1.Views.Attatched;
 public class MyTextbox : DependencyObject
@@ -51,6 +52,51 @@ public class MyTextbox : DependencyObject
     private static bool IsTextValid(string text)
     {
         return Regex.Match(text, @"^\d*\.?\d*$").Success;
+    }
+
+    #endregion
+
+    #region OnEnterKeyDown
+
+    public static readonly DependencyProperty OnEnterKeyDownProperty
+        = DependencyProperty.RegisterAttached("OnEnterKeyDown",
+            typeof(ICommand), typeof(MyTextbox),
+            new PropertyMetadata(OnOnEnterKeyDownChanged));
+
+    public static ICommand GetOnEnterKeyDown(DependencyObject obj)
+    {
+        return (ICommand)obj.GetValue(OnEnterKeyDownProperty);
+    }
+
+    public static void SetOnEnterKeyDown(DependencyObject obj, ICommand value)
+    {
+        obj.SetValue(OnEnterKeyDownProperty, value);
+    }
+
+    private static void OnOnEnterKeyDownChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+    {
+        TextBox textBox = (TextBox)d;
+        if (e.OldValue == null && e.NewValue != null)
+        {
+            textBox.PreviewKeyDown += TextBox_PreviewKeyDown;
+        }
+        else if (e.OldValue != null && e.NewValue == null)
+        {
+            textBox.PreviewKeyDown -= TextBox_PreviewKeyDown;
+        }
+    }
+
+    private static void TextBox_PreviewKeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.Key == Key.Enter || e.Key == Key.Return)
+        {
+            TextBox textBox = sender as TextBox;
+            ICommand command = GetOnEnterKeyDown(textBox);
+            if (command != null && command.CanExecute(textBox))
+            {
+                command.Execute(textBox);
+            }
+        }
     }
 
     #endregion
