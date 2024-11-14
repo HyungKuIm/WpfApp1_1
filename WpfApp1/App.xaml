@@ -43,5 +43,9 @@
         <DataTemplate DataType="{x:Type ViewModels:RoutedEventTestViewModel}">
             <Views:RoutedEventTestView />
         </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ViewModels:CommandViewModel}">
+            <Views:CommandView />
+        </DataTemplate>
     </Application.Resources>
 </Application>

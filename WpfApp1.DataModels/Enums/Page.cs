@@ -38,6 +38,9 @@ public enum Page
     [Description("라우트이벤트 연습")]
     RoutedEventTestView,
 
+    [Description("커맨드 뷰 연습")]
+    CommandView,
+
 
 
 }

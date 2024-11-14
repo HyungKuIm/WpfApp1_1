@@ -65,5 +65,6 @@ public class MainWindowViewModel : BaseViewModel
         pages.Add(new PageModel(typeof(CalendarViewModel), Page.CalendarView));
         pages.Add(new PageModel(typeof(AnimationTestViewModel), Page.AnimationTestView));
         pages.Add(new PageModel(typeof(RoutedEventTestViewModel), Page.RoutedEventTestView));
+        pages.Add(new PageModel(typeof(CommandViewModel), Page.CommandView));
     }
 }
