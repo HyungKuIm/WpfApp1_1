@@ -36,7 +36,7 @@
         <StackPanel>
             <CustomControls:CustomButton Width="150" Height="50" HorizontalAlignment="Center"
                                          
-                                         Content="커스텀 버튼" IsHighlighted="False"/>
+                                         Content="커스텀 버튼" IsHighlighted="{Binding IsMorning}"/>
             <Button Content="버튼" Height="30" HorizontalAlignment="Center"
                 Name="button" VerticalAlignment="Center" Width="75"
                 Command="{Binding HelloCommand}" Background="Yellow">

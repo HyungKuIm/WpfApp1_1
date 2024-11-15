@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1.DataModels", "WpfAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1.CustomControls", "WpfApp1.CustomControls\WpfApp1.CustomControls.csproj", "{F1C6ADB5-2C43-4326-BB95-FB1981E4D9AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1.Converters", "WpfApp1.Converters\WpfApp1.Converters.csproj", "{53BAB8C3-EDF6-4055-BCF3-B02FE14B1A34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F1C6ADB5-2C43-4326-BB95-FB1981E4D9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1C6ADB5-2C43-4326-BB95-FB1981E4D9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1C6ADB5-2C43-4326-BB95-FB1981E4D9AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53BAB8C3-EDF6-4055-BCF3-B02FE14B1A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53BAB8C3-EDF6-4055-BCF3-B02FE14B1A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53BAB8C3-EDF6-4055-BCF3-B02FE14B1A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53BAB8C3-EDF6-4055-BCF3-B02FE14B1A34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
