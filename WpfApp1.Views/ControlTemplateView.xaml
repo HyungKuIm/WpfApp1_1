@@ -24,13 +24,19 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsHighlighted" Value="True">
+                    <Setter Property="Background" Value="Yellow"/>
+                    <Setter Property="Foreground" Value="Red" />
+                </Trigger>
+            </Style.Triggers>
         </Style>
     </UserControl.Resources>
     <Grid>
         <StackPanel>
             <CustomControls:CustomButton Width="150" Height="50" HorizontalAlignment="Center"
                                          
-                                         Content="커스텀 버튼" />
+                                         Content="커스텀 버튼" IsHighlighted="False"/>
             <Button Content="버튼" Height="30" HorizontalAlignment="Center"
                 Name="button" VerticalAlignment="Center" Width="75"
                 Command="{Binding HelloCommand}" Background="Yellow">
