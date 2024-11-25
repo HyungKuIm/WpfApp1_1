@@ -70,5 +70,6 @@ public class MainWindowViewModel : BaseViewModel
         pages.Add(new PageModel(typeof(DependencyPropertyViewModel), Page.DependencyPropertyTest));
         pages.Add(new PageModel(typeof(AllUsersViewModel), Page.AllUsersView));
         pages.Add(new PageModel(typeof(MenuViewModel), Page.KBOView));
+        pages.Add(new PageModel(typeof(AvengersViewModel), Page.AvengersView));
     }
 }

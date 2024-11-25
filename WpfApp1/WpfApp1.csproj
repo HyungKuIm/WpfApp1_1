@@ -9,18 +9,41 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\braveNW.mp4" />
+    <None Remove="Images\captainAme.png" />
+    <None Remove="Images\doomsday.mp4" />
+    <None Remove="Images\doomsday.png" />
     <None Remove="Images\im.jpg" />
     <None Remove="Images\imhk.jpg" />
+    <None Remove="Images\quantum.mp4" />
+    <None Remove="Images\reallyWa.png" />
     <None Remove="Images\sora.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Images\braveNW.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\doomsday.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\quantum.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\captainAme.png" />
+    <Resource Include="Images\doomsday.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\im.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\imhk.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\reallyWa.png" />
     <Resource Include="Images\sora.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

@@ -53,4 +53,7 @@ public enum Page
     [Description("메뉴 연습")]
     KBOView,
 
+    [Description("어벤져스")]
+    AvengersView,
+
 }
